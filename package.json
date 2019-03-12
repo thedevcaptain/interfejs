@@ -1,0 +1,16 @@
+{
+  "name": "interfejs",
+  "version": "1.2.1",
+  "description": "A simple REST API wrapper around a google sheet",
+  "main": "index.js",
+  "author": "PirataFrancis",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "chalk": "^2.4.2",
+    "googleapis": "^27.0.0",
+    "joi": "^14.3.1",
+    "morgan": "^1.9.1",
+    "morgan-body": "^2.4.5"
+  }
+}
