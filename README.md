@@ -8,6 +8,11 @@ InterfeJS (interface from Polish) is a little module that builds on top of an Ex
 
 Good question, yeah good question indeed. Sadly I'm not here to answer it.
 
+[![npm](https://img.shields.io/npm/v/interfejs.svg?label=Version)](https://www.npmjs.com/package/interfejs)
+[![GitHub last commit](https://img.shields.io/github/last-commit/PirataFrancis/interfejs.svg)](https://github.com/PirataFrancis/interfejs/commits/master)
+![CircleCI (all branches)](https://img.shields.io/circleci/project/github/PirataFrancis/interfejs.svg)
+
+
 ## Getting Started
 
 InterferJS has 1 working authentication methods:
