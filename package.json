@@ -9,6 +9,12 @@
     "type": "git",
     "url": "https://github.com/PirataFrancis/interfejs.git"
   },
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.18.3",
@@ -17,5 +23,9 @@
     "joi": "^14.3.1",
     "morgan": "^1.9.1",
     "morgan-body": "^2.4.5"
+  },
+  "devDependencies": {
+    "mocha": "^6.0.2",
+    "sinon": "^7.2.7"
   }
 }
