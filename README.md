@@ -15,11 +15,12 @@ Good question, yeah good question indeed. Sadly I'm not here to answer it.
 
 ## Getting Started
 
-InterferJS has 1 working authentication methods:
+InterferJS has 2 working authentication methods:
 
 - oAuth2 Google Authentication (for end user's spreadsheets access)
+- API Key (for public accessible spreadsheets)
 
-More about this will be covered here: [Authentication](http://www.404notfound.fr/assets/images/pages/img/rachatdemobile.jpg)
+More about this will be covered here: [Authorization](https://github.com/PirataFrancis/interfejs#authentication)
 
 ### Installing
 
@@ -59,7 +60,10 @@ The module parse and validate a json file to get the REST API structure to expos
 {
   "name":"My API",
   "version":1,
-  "sheetId":"1egSO8BKkL1ji--------HtnfN3Rcl6rrQ",
+  "sheetId":"1egSO8BKkL1--------......QFa4aHtnfN3Rcl6rrQ",
+  "authorization": {
+    "key": "AIzaSyAw_d0..........jkmLYt_hIcA"
+  },
   "resources":[
     {
       "name":"test",
@@ -83,7 +87,7 @@ The module parse and validate a json file to get the REST API structure to expos
         }
       ]
     }
-  ]	
+  ]
 }
 ```
 
@@ -102,6 +106,18 @@ There are 3 main schema here to analyze:
 - sheetId `string` 
 
   The Id of the Google spreadsheet from which you want to use the data. (https://docs.google.com/spreadsheets/d/{**sheetId**})
+
+- authorization `object`
+
+  The authorization method that should be used and it has two different attributes that can be defined:
+
+  - key `string`
+
+    The APIKey generated from the Google API Console.
+
+  - dir `string`
+
+    The directory where the oAuth2 Credentials are stored and where the tokens will be.
 
 - resources `array of` [Resource](https://github.com/PirataFrancis/interfejs#Resources)
 
@@ -150,16 +166,22 @@ The credentials will be stored into a directory (by default it's named `credenti
 
 With all four of these files, the module is ready to go
 
+#### API Key
+
+Since it may be tedious to authorize the API with oAuth2, you can still specify an API Key linked to a Google project.
+
+This authorization method makes accessible the published Google spreadsheets only, so before using it make sure your sheet is public. 
+
 ## Features
 
 - Declarative API generation
 - API GET method
-- Google spreadsheet private file access via oAuth2 credentials
+- Access to both private and public Spreadsheets
 - ... more to go
 
 ## Next in line
 
-- POST,PUT,DELETE methods
+- POST, PUT, DELETE methods
 - Output customization
 - Function reference by name
 

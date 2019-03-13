@@ -1,9 +1,14 @@
 {
   "name": "interfejs",
   "version": "1.2.2",
-  "description": "A simple REST API wrapper around a google sheet",
+  "description": "Declarative REST API builder for exposing Google spreadsheet data",
   "main": "index.js",
   "author": "PirataFrancis",
+  "homepage": "https://github.com/PirataFrancis/interfejs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PirataFrancis/interfejs.git"
+  },
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.18.3",
