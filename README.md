@@ -20,7 +20,7 @@ InterferJS has 2 working authentication methods:
 - oAuth2 Google Authentication (for end user's spreadsheets access)
 - API Key (for public accessible spreadsheets)
 
-More about this will be covered here: [Authorization](https://github.com/PirataFrancis/interfejs#authentication)
+More about this will be covered here: [Authentication](https://github.com/PirataFrancis/interfejs#authentication)
 
 ### Installing
 
@@ -168,9 +168,9 @@ With all four of these files, the module is ready to go
 
 #### API Key
 
-Since it may be tedious to authorize the API with oAuth2, you can still specify an API Key linked to a Google project.
+Since it may be tedious to authenticate the API with oAuth2, you can still specify an API Key linked to a Google project.
 
-This authorization method makes accessible the published Google spreadsheets only, so before using it make sure your sheet is public. 
+This authentication method makes accessible the published Google spreadsheets only, so before using it make sure your sheet is public. 
 
 ## Features
 

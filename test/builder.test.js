@@ -44,32 +44,9 @@ describe("api building",()=>{
             version:1,
             authorization:{key:"ciao"},
             resources:[
+                {
 
-            ]
-        };
-        builder.api(gapi,app,api);
-    });
-
-    it('should build a simple api, empty resources', function () {
-        //arrange
-        let app = {
-            route:(route)=>{
-                return {
-                    get:()=>{
-
-                    }
-                };
-            }
-        };
-        let gapi = {
-            get:sinon.spy()
-        };
-        let api = {
-            name:"api 1",
-            version:1,
-            authorization:{key:"ciao"},
-            resources:[
-
+                }
             ]
         };
         builder.api(gapi,app,api);
@@ -101,4 +78,5 @@ describe("api building",()=>{
             builder.api(gapi,app,api);
         }, TypeError);
     });
+
 });
