@@ -71,7 +71,8 @@ The module parse and validate a json file to get the REST API structure to expos
       "methods":[
         {
           "type":"GET",
-          "range":"A1:D"
+          "range":"A1:D",
+          "mapping": true
         }
       ],
       "resources":[
@@ -146,6 +147,11 @@ There are 3 main schema here to analyze:
 - type`string`
 
   The actual HTTP method. (Be careful, you have to write it upper case)
+  
+- mapping`boolean`
+
+    A boolean flag that enables mapping the data. It it is true the response will be 
+    an `array of objects` for each of which the keys will be the values into the first row  and the effective data will be retrieved from the 2nd row. (just like a real table).
 
 - range `string`
 
