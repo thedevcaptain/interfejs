@@ -106,7 +106,7 @@ There are 3 main schema here to analyze:
 
 - sheetId `string` 
 
-  The Id of the Google spreadsheet from which you want to use the data. (https://docs.google.com/spreadsheets/d/{**sheetId**})
+  The Id of the Google spreadsheet you want to use. (https://docs.google.com/spreadsheets/d/{**sheetId**})
 
 - authorization `object`
 
@@ -146,11 +146,11 @@ There are 3 main schema here to analyze:
 
 - type`string`
 
-  The actual HTTP method. (Be careful, you have to write it upper case)
+  The actual HTTP method. (Be careful, you have to write it uppercase)
   
 - mapping`boolean`
     
-    A boolean flag that enables mapping the data. It it is true the response will be 
+    A boolean flag that enables the data mapping. If it is true the response will be 
     an `array of objects` for each of which the keys will be the values into the first row  and the effective data will be retrieved from the 2nd row. (just like a real table).
     
 - range `string`
@@ -160,7 +160,7 @@ There are 3 main schema here to analyze:
 - search `object`
     
     If this object is specified the endpoint will be used as a GET search endpoint
-    and it will search for the values (retrieved from the query parameter named `param` into the column `column`).
+    and it will search for the values (retrieved from the query parameter named `param`) into the column `column`.
     If search is active, the `mapping` and `range` parameter won't be executed.
     - param `string`
     - column `string`
@@ -177,7 +177,7 @@ The credentials will be stored into a directory (by default it's named `credenti
 - `token.json` there will be stored the tokens needed for the connection.
 - `code.txt` this file is the second one you have to create in order to authenticate. Since it's oAuth2, once you go to the auth link that the module (on the first run) will provide you, a code will be generated and it is needed to be placed into that file.
 
-With all four of these files, the module is ready to go.
+With all three of these files the module is ready to go.
 
 #### API Key
 
@@ -189,9 +189,10 @@ This authentication method makes accessible the published Google spreadsheets on
 ## Features
 
 - Declarative API generation
-- API GET method
+- GET method
 - Access to both private and public Spreadsheets
-- ... more to go
+- Searching into columns value
+- Logging levels
 
 ## Next in line
 
@@ -214,7 +215,7 @@ Please refer to [CHANGELOG.md](http://www.404notfound.fr/assets/images/pages/img
 ## About me
 
 I'm Francesco Borrelli an Italian Software Engineer, I love coding, solving problems and pizza so feel free contact me about anything :facepunch:
-[Email](mailto:borrellifrm@gmail.com)
+[Email](mailto:borrellifrn@gmail.com)
 [Facebook](https://www.facebook.com/PirataFrancis)
 
 ## License
