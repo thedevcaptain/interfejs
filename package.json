@@ -1,6 +1,6 @@
 {
   "name": "interfejs",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "Declarative REST API builder for exposing Google spreadsheet data",
   "main": "index.js",
   "author": "PirataFrancis",
