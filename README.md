@@ -149,13 +149,21 @@ There are 3 main schema here to analyze:
   The actual HTTP method. (Be careful, you have to write it upper case)
   
 - mapping`boolean`
-
+    
     A boolean flag that enables mapping the data. It it is true the response will be 
     an `array of objects` for each of which the keys will be the values into the first row  and the effective data will be retrieved from the 2nd row. (just like a real table).
-
+    
 - range `string`
 
   The range on the spreadsheet to use as source for this endpoint, it has to be written with [A1 Notation](https://developers.google.com/sheets/api/guides/concepts#a1_notation)
+
+- search `object`
+    
+    If this object is specified the endpoint will be used as a GET search endpoint
+    and it will search for the values (retrieved from the query parameter named `param` into the column `column`).
+    If search is active, the `mapping` and `range` parameter won't be executed.
+    - param `string`
+    - column `string`
 
 ### Authentication
 
@@ -167,16 +175,16 @@ The credentials will be stored into a directory (by default it's named `credenti
 
 - `credentials.json` - this is the file that you have to get from the Google API Console, after creating a firebase project, activating the Google Docs API and creating a Service account credentials. (**You have to provide it and place it under your credentials directory**)
 - `token.json` there will be stored the tokens needed for the connection.
-- `scopes.json` there are the scopes needed for the token generations.
-- `code.json` this file is the second one you have to create in order to authenticate. Since it's oAuth2, once you go to the auth link that the module (on the first run) will provide you, a code will be generated and it is needed to be placed into that file.
+- `code.txt` this file is the second one you have to create in order to authenticate. Since it's oAuth2, once you go to the auth link that the module (on the first run) will provide you, a code will be generated and it is needed to be placed into that file.
 
-With all four of these files, the module is ready to go
+With all four of these files, the module is ready to go.
 
 #### API Key
 
 Since it may be tedious to authenticate the API with oAuth2, you can still specify an API Key linked to a Google project.
 
 This authentication method makes accessible the published Google spreadsheets only, so before using it make sure your sheet is public. 
+**This kind of auth does not permit any update to data on the spreadsheets**
 
 ## Features
 
